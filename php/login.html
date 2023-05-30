@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- CSS.MAIN -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+
+
+</head>
+
+<body>
+    <div class="py-3 navbar-light bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <a class="" href="index.html">
+                        <img src="img/logo.png" class="" width="40" alt="Passare Store" loading="lazy">
+                        <span class="logo-font align-self-center">Passare Store</span>
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center ">
+                    <a class="" href="index.html">
+                        <span class="align-self-center logo-nome">Passare Store</span>
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-end">
+                    <a class="" href="index.html">
+                        <span class="">Contato</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="d-flex justify-content-center">
+
+            <form class="login100-form" action="">
+
+                <span class="login100-form-title mb-5">
+                    Login to continue
+                </span>
+
+                <div class="wrap-input100 validate-input">
+                    <input id="input1" class="input100" type="text" name="email">
+                    <span class="focus-input100"></span>
+                    <span id="id1" class="label-input100">Email</span>
+                </div>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <input id="input2" class="input100" type="password" name="pass">
+                    <span class="focus-input100"></span>
+                    <span id="id2" class="label-input100">Senha</span>
+                </div>
+
+
+                <div class="flex-sb-m w-full p-t-3 mb-5">
+                    <div class="contact100-form-checkbox">
+                        <div class="row">
+                            <div class="col-6">
+                                <input class="input-checkbox100" id="ckb1" type="checkbox" name="lembrar-me">
+                                <label class="label-checkbox100" for="ckb1">
+                                    Lembrar e-mail
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="d-flex justify-content-end txt1">
+                                    Esqueceu a senha?
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+                        Login
+                    </button>
+                </div>
+        </div>
+
+        </form>
+
+    </div>
+
+
+    <script>
+        let inputFilter1 = document.querySelector("#input1");
+        let inputFilter2 = document.querySelector("#input2");
+        let mostrar = document.querySelector(".label-input100");
+        let span1 = document.querySelector("#id1");
+        let span2 = document.querySelector("#id2");
+
+
+        inputFilter1.addEventListener("input", function () {
+            if (inputFilter1.value != "") {
+                span1.classList.add('mostrar');
+            } else {
+                span1.classList.add('label-input100');
+                span1.classList.remove('mostrar');
+            }
+        });
+
+        inputFilter2.addEventListener("input", function () {
+            if (inputFilter2.value != "") {
+                span2.classList.add('mostrar');
+            } else {
+                span2.classList.add('label-input100');
+                span2.classList.remove('mostrar');
+            }
+        });
+    </script>
+
+
+    <script src="js/rellax.js"></script>
+    <script>
+        let rellax = new Rellax('.rellax', {
+            center: true
+        });
+    </script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+
+</body>
+
+</html>
