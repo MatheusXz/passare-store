@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Passare Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="jquery-ui-1.13.0.custom/jquery-ui.css">
+    <!-- CSS.MAIN -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/util.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="">
+        <div class="container">
+            <div class="col-lg-3 col-12">
+                <div class="row">
+                    <div class="col-lg-8 col-10 d-flex justify-content-start my-auto">
+                        <a class="d-flex justify-content-start" href="index.html">
+                            <button class="btn d-flex justify-content-start">
+                                <img src="img/logo.png" class="my-auto" width="30" alt="Passare Store">
+
+                                <span style="font-size: medium" class="my-auto">Passare Store</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-2 d-flex justify-content-end my-3">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="input-group">
+                    <input class="my-auto form-control" id="search" list="asd" type="search"
+                        placeholder="O que você procura?" aria-label="Recipient's username" aria-label="Search"
+                        aria-describedby="button-addon2">
+                    <!-- lista de sugestão ao pesquisar -->
+                    <datalist id="asd">
+                        <select name="" id="">
+                            <option value="" id="sugestao"></span>
+                        </select>
+                    </datalist>
+                    <!-- botaão de busca -->
+                    <button style="border: 2px solid orangered;"
+                        class="border-start-0 border-end-0 border-top-0 bg-transparent" onclick="CliqueBtn()"
+                        type="button" id="button-addon2">
+                        <div class="">
+                            <img src="img/icons8-pesquisar.svg" class="" width="25" alt="">
+                        </div>
+                    </button>
+                    <!-- <span role="status" aria-live="polite" class=""></span> -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <ul id="button-compras" class="navbar-nav mx-auto">
+                    <li class="nav-item mx-auto">
+                        <a class="nav-link" href="#">
+                            <button class="btn d-flex justify-content-center">
+                                <img src="img/contact.svg" class="" width="45" alt="carrinho">
+
+                                <span style="font-size: large " class="">Minha
+                                    conta
+                                    <span class="badge text-black">Entrar / Cadastrar</span>
+                                </span>
+                            </button>
+                        </a>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="#">
+                            <button class="btn d-flex justify-content-start">
+                                <img src="img/carrinho.png" class="" width="40" alt="carrinho">
+
+                                <span style="font-size: large "
+                                    class="d-flex flex-column justify-content-center">Carrinho
+                                    <span class="badge badge-danger bg-danger">100</span>
+                                </span>
+                            </button>
+                        </a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- tentar por um modal nesse sugestão -->
+
+
+    <div class="header-area d-none d-lg-block d-xl-block">
+        <div class="container">
+            <div class="user-menu">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <ul class="d-flex justify-content-center">
+                        <li><a href="#"><i class="fa fa-dollar"></i> Ofertas </a></li>
+                        <li><a href="#"><i class="fa fa-list"></i> Categorias </a></li>
+                        <li><a href="#"><i class="fa fa-heart"></i> Favoritos </a></li>
+                        </a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i> Compras </a></li>
+                        <li><a href="#"><i class="fa fa-bell"></i> Notificação
+                                <span style="font-size: 10px; top: -100px;"
+                                    class="badge badge-danger bg-danger">0</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-2"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-lg-none my-5">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <h3 class="text-body">Bem-vindo(a)</h3>
+                            <p class="text-justify">Entre em na sua conta da <b>Passare Store</b>, e acesse sua <b>Área
+                                    do cliente</b>. </p>
+                            <p> Confira por lá os seus dados pesoais, suas compras, favoritos, endereços e etc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a class="nav-link btn btn-sm btn-secondary text-white" href="#">Entrar</a>
+                    </div>
+                    <div class="col-6">
+                        <a class="nav-link btn btn-sm btn-danger text-white" href="#">Criar
+                            conta</a>
+                    </div>
+                </div>
+            </div>
+
+            <span class="my-3"></span>
+        </div>
+
+
+        <div class="header-area d-lg-none my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="w-100">
+                        <div class="user-menu">
+                            <ul class="text-center list-group list-group-flush">
+                                <li class="list-group-item list-group-item-action"><a href="#"><i
+                                            class="fa fa-dollar"></i> Ofertas </a></li>
+                                <li class="list-group-item list-group-item-action">
+                                    <a href="#"><i class="fa fa-list "></i> Categorias </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action"><a href="#"><i
+                                            class="fa fa-cart-plus"></i> Carrinho </a></li>
+                                <li class="list-group-item list-group-item-action"><a href="#"><i
+                                            class="fa fa-heart"></i> Favoritos </a></li>
+                                <li class="list-group-item list-group-item-action"><a href="#"><i
+                                            class="fa fa-bell"></i> Avisos
+                                        <span style="font-size: x-small; right: -10px;"
+                                            class="badge badge-danger bg-danger">0</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action"><a href="#"><i
+                                            class="fa fa-shopping-bag"></i> Compras </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="bg-warning py-2">
+            Some top header info
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Brand</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+                    </ul>
+                </div> <!-- navbar-collapse.// -->
+            </div> <!-- container-fluid.// -->
+        </nav>
+    </header>
+
+    <!-- SECTION 001 -->
+
+    <div class=""
+        style="background-image: url(img/mockup-fundo-top.webp); height: 10000px; background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);"">
+
+        <div class=" container">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <li><i class="icon-credit-card"></i> icon-credit-card PARCELAMENTO</li>
+            </div>
+            <div class="col-md-3">ENTREGA RÁPIDA</div>
+            <div class="col-md-3">DESCONTOS</div>
+            <div class="col-md-3">ATENDIMENTO</div>
+        </div>
+    </div>
+
+    <!-- End footer bottom area -->
+
+    <!-- Scripts -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="jquery-ui-1.13.0.custom/jquery-ui.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://use.fontawesome.com/79ab68be34.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -7,9 +7,14 @@
     <title>Home</title>
 
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <!-- FIM -->
+
+    <link rel="stylesheet" href="./css/main.css">
 
 </head>
 
@@ -18,71 +23,160 @@
 
 
     <!-- NAVBAR -->
-    <div class="row justify-content-center my-auto">
-        <div class="text-center col-3"><strong>Frete grátis a partir de R$ 150,00 ou mais.</strong></div>
+    <div class="row justify-content-center my-2">
+        <div class="text-center col-12"><strong>Frete grátis a partir de R$ 150,00 ou mais.</strong></div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
+            <div class="col-lg-3 col-12">
+                <div class="row">
+                    <div class="col-lg-8 col-10 d-flex justify-content-start my-auto">
+                        <a class="d-flex justify-content-start" href="index.html">
+                            <button class="btn d-flex justify-content-start">
+                                <!-- <img src="img/logo.png" class="my-auto" width="30" alt="Passare Store"> -->
 
+                                <span style="font-size: medium" class="my-auto">Passare Store</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-2 d-flex justify-content-end my-3">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="input-group">
+                    <input class="my-auto form-control" id="search" list="asd" type="search"
+                        placeholder="O que você procura?" aria-label="Recipient's username" aria-label="Search"
+                        aria-describedby="button-addon2">
+                    <!-- lista de sugestão ao pesquisar -->
+                    <datalist id="asd">
+                        <select name="" id="">
+                            <option value="" id="sugestao"></span>
+                        </select>
+                    </datalist>
+                    <!-- botaão de busca -->
+                    <button style="border: 2px solid orangered;"
+                        class="border-start-0 border-end-0 border-top-0 bg-transparent" onclick="CliqueBtn()"
+                        type="button" id="button-addon2">
+                        <div class="">
+                            <img src="img/icons8-pesquisar.svg" class="" width="25" alt="">
+                        </div>
+                    </button>
+                    <!-- <span role="status" aria-live="polite" class=""></span> -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <ul id="button-compras" class="navbar-nav mx-auto">
+                    <li class="nav-item mx-auto">
+                        <a class="nav-link" href="#">
+                            <button class="btn d-flex justify-content-center">
+                                <img src="img/contact.svg" class="" width="45" alt="carrinho">
 
+                                <span style="font-size: large " class="">Minha
+                                    conta
+                                    <span class="badge text-black">Entrar / Cadastrar</span>
+                                </span>
+                            </button>
+                        </a>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="#">
+                            <button class="btn d-flex justify-content-start">
+                                <img src="img/carrinho.png" class="" width="40" alt="carrinho">
+
+                                <span style="font-size: large "
+                                    class="d-flex flex-column justify-content-center">Carrinho
+                                    <span class="badge badge-danger bg-danger">100</span>
+                                </span>
+                            </button>
+                        </a>
+                    </li>
+                    </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-1" type="search" placeholder="O que você está procurando..." aria-label="O que você está procurando...">
-                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                </form>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <ul class="nav justify-content-between">
-            <li class="nav-item">
-                <a class="nav-link text-black-50" aria-current="page" href="#">Novos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-black-50" href="#">Smartphones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-black-50" href="#">Celulares</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-black-50" href="#">Peliculas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-black-50" href="#">Capas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-black-50" href="#">Fones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-black-50" href="#">Som</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-black-50 disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-    </div>
 
-    <!-- BODY -->
-    <main>
-        <div class="container">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-lg-none my-5">
 
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <h3 class="text-body">Bem-vindo(a)</h3>
+                            <p class="text-justify">Entre em na sua conta da <strong>Passare Store</strong>, e acesse sua <strong>Área
+                                    do cliente</strong>. </p>
+                            <p> Confira por lá os seus dados pesoais, suas compras, favoritos, endereços e etc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a class="nav-link btn btn-sm btn-secondary text-white" href="#">Entrar</a>
+                    </div>
+                    <div class="col-6">
+                        <a class="nav-link btn btn-sm btn-danger text-white" href="#">Criar
+                            conta</a>
+                    </div>
+                </div>
+            </div>
+
+            <span class="my-3"></span>
         </div>
-    </main>
 
-    <footer>
+        <div class="container">
+            <ul class="nav justify-content-between">
+                <li class="nav-item">
+                    <a class="nav-link text-black-50" aria-current="page" href="#">Novos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black-50" href="#">Smartphones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black-50" href="#">Celulares</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black-50" href="#">Peliculas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black-50" href="#">Capas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black-50" href="#">Fones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black-50" href="#">Som</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black-50 disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
 
-    </footer>
+        <!-- BODY -->
+        <main>
+            <div class="container">
 
-    <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <!-- FIM -->
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <!-- FIM -->
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "passare-store",
+			"path": "."
+		},
+		{
+			"name": "css",
+			"path": "C:/Users/Passare Store 1/Downloads/css"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "passare-store"
+	}
+}
